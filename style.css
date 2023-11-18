@@ -1,0 +1,49 @@
+* {
+padding: 0;
+margin: 0;
+}
+
+#main {
+    width: 100vw;
+    height: 100vh;
+    min-width:950px ;
+    min-height: 600px;
+    background-color: #006D77;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+}
+
+.txt {
+    text-align: center;
+    color: #006D77;
+}
+
+#container {
+    width: 950px;
+    height: 620px;
+    background-color: #EDF6F9;
+    border-radius: 3%;
+}
+
+#chartHolder {
+    display: flex;
+    justify-content: center;
+    color: black;
+    font-weight:bold
+}
+
+svg {
+    height: 535px;
+    width: 925px;
+}
+
+#tooltip {
+    padding: 2px;
+    font: 15px;
+    box-shadow: 1px 1px 10px;
+    border-radius: 2px;
+    position: absolute;
+}
