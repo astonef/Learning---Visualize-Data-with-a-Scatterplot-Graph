@@ -55,7 +55,7 @@ function GetChart(){
             .attr('x',-192)
             .style('font-size', 20)
             .style("fill","#006D77")
-            .text("Time in Minutes")
+            .text("Tempo in minuti")
         //rect
         const color = ["#E29578","#006D77"]
         d3.select("svg")
@@ -79,8 +79,8 @@ function GetChart(){
                 tooltip.html(`${d.Name}: ${d.Nationality} <br/> Year: ${d.Year}, Time ${timeFormat(time[d.Place - 1])} ${d.Doping ? '<br/><br/>' + d.Doping : ''}`)
                         .style('left', `${event.pageX + 10}px`)
                         .style('top', `${event.pageY - 20}px`)
-                        .style("color","#006D77")
-                        .style('background-color', '#83C5BE');
+                        .style("color","#00777B")
+                        .style('background-color', '#7FB3AF');
                     
     
                 })
@@ -94,7 +94,7 @@ function GetChart(){
             .attr("width",250)
             .attr("height",80)
             .attr("transform",`translate(${width - 250},${height / 2 - 20})`)
-            .style("fill","#FFDDD2")
+            .style("fill","#FFDAB9")
         const legendLabel = legendContainer.selectAll(".lagendLabel")
             .data(color)
             .enter()
@@ -107,12 +107,12 @@ function GetChart(){
             .style("fill",(d)=>{return d})
         legendLabel.append("text")
             .text((d,i)=>{
-                if(i==0){return "No doping allegations"}
-                else{return "Riders with doping allegations"}
+                if(i==0){return "Nessuna accusa di doping"}
+                else{return "Ciclisti con accuse di doping"}
             })
             .attr('transform', `translate(-5, 15)`)
             .style('text-anchor', 'end')
-            .style("fill","#006D77")
+            .style("fill","#008080")
             
     })
 }
